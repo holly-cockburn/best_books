@@ -25,7 +25,7 @@ SECRET_KEY = 'j8ioci$@9pe)dppjp*00!lk@mryp46z#ft@k*nd_jf-)l7r#)('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['rawanq8.pythonanywhere.com']
 
 
 # Application definition
@@ -54,6 +54,7 @@ ROOT_URLCONF = 'best_books.urls'
 
 TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -65,10 +66,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
 ]
+
+
 
 WSGI_APPLICATION = 'best_books.wsgi.application'
 
@@ -119,5 +123,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
+STATIC_DIR = os.path.join(BASE_DIR,'static')
+STATICFILES_DIRS = [STATIC_DIR, ]
 
 STATIC_URL = '/static/'
+
+
+MEDIA_DIR = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = MEDIA_DIR
+MEDIA_URL = '/media/'
+

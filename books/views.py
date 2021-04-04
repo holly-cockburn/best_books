@@ -7,4 +7,5 @@ def home(request):
     return render(request, 'books/home.html', context_dict)
 
 def about (request):
-    return HttpResponse("This is the about page")
+    context_dict ={}
+    return render(request,'books/about.html', context_dict)
