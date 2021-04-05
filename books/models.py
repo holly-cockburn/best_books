@@ -33,6 +33,12 @@ class Review(models.Model):
     book = models.ForeignKey(Book, on_delete=models.CASCADE)
     user = models.ForeignKey(User,null=True, on_delete=models.SET_NULL)
 
+    def __str__(self):
+        return self.user.username
+
 class Author(models.Model):
     name = models.CharField(max_length=128)
     books = models.ManyToManyField(Book)
+
+    def __str__(self):
+        return self.name
