@@ -25,7 +25,7 @@ SECRET_KEY = 'j8ioci$@9pe)dppjp*00!lk@mryp46z#ft@k*nd_jf-)l7r#)('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rawanq8.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -132,4 +132,3 @@ STATIC_URL = '/static/'
 MEDIA_DIR = os.path.join(BASE_DIR,'media')
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
-
